@@ -8,7 +8,11 @@
         android:id="@+id/playerFragment"
         android:name="com.guillaume.devmobileproject.PlayerFragment"
         android:label="fragment_player"
-        tools:layout="@layout/fragment_player" />
+        tools:layout="@layout/fragment_player" >
+        <action
+            android:id="@+id/action_playerFragment_to_playlistsFragment"
+            app:destination="@id/playlistsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.guillaume.devmobileproject.fragmentHome"
@@ -27,5 +31,22 @@
         android:id="@+id/profileFragment"
         android:name="com.guillaume.devmobileproject.profileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_favorite"
+            app:destination="@id/favorite" />
+        <action
+            android:id="@+id/action_profileFragment_to_playlistsFragment"
+            app:destination="@id/playlistsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.guillaume.devmobileproject.favorite"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.guillaume.devmobileproject.playlistsFragment"
+        android:label="fragment_playlists"
+        tools:layout="@layout/fragment_playlists" />
 </navigation>
