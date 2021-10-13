@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profileFragment"
+    tools:context=".favorite"
     android:background="@color/teal_200">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Profile"
+        android:text="Favorite"
         android:textColor="#fff"
         android:textSize="50dp"
         android:textStyle="bold"/>
