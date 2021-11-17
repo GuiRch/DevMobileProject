@@ -21,8 +21,8 @@
         <action
             android:id="@+id/action_fragmentHome_to_playerFragment"
             app:destination="@id/playerFragment"
-            app:enterAnim="@android:anim/fade_out"
-            app:exitAnim="@android:anim/fade_in" />
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_fragmentHome_to_profileFragment"
             app:destination="@id/profileFragment" />
