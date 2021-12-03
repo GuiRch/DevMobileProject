@@ -25,7 +25,10 @@
             app:exitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_fragmentHome_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right" />
+
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -43,7 +46,14 @@
         android:id="@+id/favorite"
         android:name="com.guillaume.devmobileproject.favorite"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_fragmentFavorite_to_homeFragment"
+            app:destination="@id/fragmentHome"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
     <fragment
         android:id="@+id/playlistsFragment"
         android:name="com.guillaume.devmobileproject.playlistsFragment"

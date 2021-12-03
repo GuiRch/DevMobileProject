@@ -43,7 +43,19 @@ class fragmentHome : Fragment() {
         player.setOnClickListener {
             navController.navigate(R.id.action_fragmentHome_to_playerFragment)
         }
+
+        /*val navController2 = view.findNavController()*/
+
+        val userBtn = view.findViewById<AppCompatImageView>(R.id.userIcon)
+        userBtn.setOnClickListener {
+            navController.navigate(R.id.action_fragmentHome_to_profileFragment)
+        }
+
     }
+
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
