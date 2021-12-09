@@ -37,7 +37,7 @@ class favorite : Fragment() {
 
         val homeBtn = view.findViewById<AppCompatImageView>(R.id.homeBtn)
         homeBtn.setOnClickListener {
-            navController.navigate(R.id.action_fragmentHome_to_playerFragment)
+            navController.navigate(R.id.action_fragmentFavorite_to_homeFragment)
         }
     }
 

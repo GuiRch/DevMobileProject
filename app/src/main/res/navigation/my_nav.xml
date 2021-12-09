@@ -10,6 +10,9 @@
         android:label="fragment_player"
         tools:layout="@layout/fragment_player" >
         <action
+            android:id="@+id/action_playerFragment_to_fragmentHome"
+            app:destination="@+id/fragmentHome"/>
+        <action
             android:id="@+id/action_playerFragment_to_playlistsFragment"
             app:destination="@id/playlistsFragment" />
     </fragment>
@@ -20,9 +23,7 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_playerFragment"
-            app:destination="@id/playerFragment"
-            app:enterAnim="@android:anim/slide_out_right"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:destination="@id/playerFragment" />
         <action
             android:id="@+id/action_fragmentHome_to_profileFragment"
             app:destination="@id/profileFragment"

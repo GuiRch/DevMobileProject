@@ -26,10 +26,18 @@ class profileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val navController = view.findNavController()
 
-        val player = view.findViewById<AppCompatImageView>(R.id.userIcon)
-        player.setOnClickListener {
-            navController.navigate(R.id.action_fragmentHome_to_profileFragment)
+        val favBtn = view.findViewById<AppCompatImageView>(R.id.favBtn) as Button
+        favBtn.setOnClickListener {
+            navController.navigate(R.id.action_profileFragment_to_favorite)
         }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
     companion object {
