@@ -5,6 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.annotation.GlideModule
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.module.AppGlideModule
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +47,24 @@ class PlayerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_player, container, false)
+    }
+    // navigate to fragment
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val navController2 = view.findNavController()
+
+        val player2 = view.findViewById<AppCompatImageView>(R.id.arrow)
+        player2.setOnClickListener {
+            navController2.navigate(R.id.action_playerFragment_to_fragmentHome)
+        }
+        //profil picture
+        val url2 = "https://source.unsplash.com/random"
+        val user2 = view.findViewById<ImageView>(R.id.userIcon2)
+        Glide.with(this).load(url2).circleCrop().error(R.drawable.user_icon).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(user2)
+        // music
+        val cover = view.findViewById<ImageView>(R.id.imageView)
+        Glide.with(this).load(url2).centerCrop().error(R.drawable.audio_player).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(cover)
+
     }
 
     companion object {

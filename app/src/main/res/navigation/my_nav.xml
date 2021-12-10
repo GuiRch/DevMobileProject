@@ -12,6 +12,15 @@
         <action
             android:id="@+id/action_playerFragment_to_playlistsFragment"
             app:destination="@id/playlistsFragment" />
+        <action
+            android:id="@+id/action_playerFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_playerFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome"
+            app:enterAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
@@ -21,8 +30,8 @@
         <action
             android:id="@+id/action_fragmentHome_to_playerFragment"
             app:destination="@id/playerFragment"
-            app:enterAnim="@android:anim/slide_out_right"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_fragmentHome_to_profileFragment"
             app:destination="@id/profileFragment" />

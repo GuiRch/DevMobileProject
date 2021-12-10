@@ -18,19 +18,21 @@
             android:id="@+id/editText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="Acceuil"
             android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:text="Acceuil"
             android:textColor="#fff"
             android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userIcon2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/userIcon"/>
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id='@+id/userIcon'
+            android:id='@+id/userIcon2'
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -47,34 +49,89 @@
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:padding="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/navLayout">
-        <TextView
-            android:id="@+id/recommendationText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recommendé pour vous"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="@+id/mainLayout"
-            app:layout_constraintTop_toTopOf="@+id/mainLayout"
-            tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/navLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <ImageView
             android:id="@+id/imageButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="44dp"
+            android:layout_marginBottom="16dp"
             android:background="@null"
             android:src="@drawable/player"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/favoriteText"
+            android:layout_width="match_parent"
+            android:layout_height="239dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Favoris"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.725" />
+            app:layout_constraintTop_toBottomOf="@+id/recommendationText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/favoriteText"
+            app:layout_constraintEnd_toEndOf="@+id/favoriteText"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/favoriteText"
+            app:layout_constraintTop_toTopOf="@+id/favoriteText"
+            app:layout_constraintVertical_bias="0.61"
+            tools:listitem="@layout/musicitem_layout" />
+
+        <TextView
+            android:id="@+id/recommendationText"
+            android:layout_width="match_parent"
+            android:layout_height="239dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:text="Recommendé pour vous"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/favoriteText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recommendationText"
+            app:layout_constraintEnd_toEndOf="@+id/recommendationText"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toStartOf="@+id/recommendationText"
+            app:layout_constraintTop_toTopOf="@+id/recommendationText"
+            app:layout_constraintVertical_bias="0.61"
+            tools:listitem="@layout/musicitem_layout" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
