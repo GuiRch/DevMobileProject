@@ -26,7 +26,7 @@ class profileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val navController = view.findNavController()
 
-        val favBtn = view.findViewById<AppCompatImageView>(R.id.favBtn) as Button
+        val favBtn = view.findViewById<Button>(R.id.favBtn)
         favBtn.setOnClickListener {
             navController.navigate(R.id.action_profileFragment_to_favorite)
         }

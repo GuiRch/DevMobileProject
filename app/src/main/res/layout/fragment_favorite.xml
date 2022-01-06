@@ -1,60 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".favorite"
     android:background="@color/background_app">
 
+    <!-- TODO: Update blank fragment layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/titleLayout"
+        android:id="@+id/navLayout"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/favoriteMainTitle"
-            android:layout_width="match_parent"
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Favoris"
+            android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:gravity="center_vertical"
+            android:text="Favoris"
             android:textColor="#fff"
             android:textSize="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userIcon3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="55dp" />
 
-        <ImageView
-            android:id="@+id/homeBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        <ImageButton
+            android:id='@+id/userIcon3'
+            android:layout_width="91dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:background="@null"
             android:scaleType="center"
-            android:src="@drawable/home_icon"
+            android:src="@drawable/user_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.888"
-            app:layout_constraintStart_toStartOf="@+id/favoriteMainTitle"
-            tools:layout_editor_absoluteY="0dp"/>
-
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/titleLayout">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mes favoris"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#ffff"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            app:layout_constraintTop_toBottomOf="@id/titleLayout"
-            tools:ignore="NotSibling" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navLayout"
+        tools:listitem="@layout/favoriteitem_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
