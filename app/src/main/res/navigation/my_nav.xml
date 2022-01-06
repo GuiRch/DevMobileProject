@@ -21,6 +21,9 @@
             android:id="@+id/action_playerFragment_to_fragmentHome"
             app:destination="@id/fragmentHome"
             app:enterAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_playerFragment_to_favorite"
+            app:destination="@id/favorite" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"

@@ -53,6 +53,12 @@ class PlayerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val navController2 = view.findNavController()
 
+        // favorite for now to test
+        val favPage = view.findViewById<AppCompatImageView>(R.id.userIcon2)
+        favPage.setOnClickListener {
+            navController2.navigate(R.id.action_playerFragment_to_favorite)
+        }
+
         val player2 = view.findViewById<AppCompatImageView>(R.id.arrow)
         player2.setOnClickListener {
             navController2.navigate(R.id.action_playerFragment_to_fragmentHome)
