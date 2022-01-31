@@ -49,6 +49,11 @@
         <action
             android:id="@+id/action_profileFragment_to_playlistsFragment"
             app:destination="@id/playlistsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/favorite"
@@ -58,6 +63,11 @@
         <action
             android:id="@+id/action_favorite_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_favorite_to_fragmentHome"
+            app:destination="@id/fragmentHome"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment

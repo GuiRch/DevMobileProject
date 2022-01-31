@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.navigation.findNavController
 import java.time.temporal.TemporalAdjusters.next
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.Glide
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,11 +28,17 @@ class profileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navController = view.findNavController()
-
+        val Home= view.findViewById<AppCompatImageView>(R.id.homeBtn)
+        Home.setOnClickListener {
+            navController.navigate(R.id.action_profileFragment_to_fragmentHome)
+        }
         val favBtn = view.findViewById<Button>(R.id.favBtn)
         favBtn.setOnClickListener {
             navController.navigate(R.id.action_profileFragment_to_favorite)
         }
+        val url2 = "https://source.unsplash.com/random"
+        val user = view.findViewById<ImageView>(R.id.userIcon)
+        Glide.with(this).load(url2).circleCrop().error(R.drawable.user_icon).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(user)
     }
 
     override fun onCreateView(

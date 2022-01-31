@@ -7,19 +7,17 @@ import androidx.navigation.findNavController
 
 import android.util.Log;
 
-// import com.spotify.android.appremote.api.ConnectionParams;
-// import com.spotify.android.appremote.api.Connector;
-// import com.spotify.android.appremote.api.SpotifyAppRemote;
+//import com.spotify.android.appremote.api.ConnectionParams;
+//import com.spotify.android.appremote.api.Connector;
+//import com.spotify.android.appremote.api.SpotifyAppRemote;
 
-// import com.spotify.protocol.client.Subscription;
-// import com.spotify.protocol.types.PlayerState;
-// import com.spotify.protocol.types.Track;
+//import com.spotify.protocol.types.Track;
 
 class MainActivity : AppCompatActivity() {
 
-    private val clientId = "ad9257db5f9a48a29997407a63246e93"
-    private val redirectUri = "https://com.spotify.android.devmobileproject/callback"
-    //private SpotifyAppRemote DevMobileProject;
+    //private val clientId = "ad9257db5f9a48a29997407a63246e93"
+    //private val redirectUri = "https://com.spotify.android.devmobileproject/callback"
+    //private var spotifyAppRemote : SpotifyAppRemote? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-    /*override fun onStart() {
+    /*
+    override fun onStart() {
         super.onStart()
         // We will start writing our code here.
         val connectionParams = ConnectionParams.Builder(clientId)

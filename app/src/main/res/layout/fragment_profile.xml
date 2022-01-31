@@ -28,6 +28,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/home_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,23 +68,26 @@
             android:id='@+id/userIcon'
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="20dp"
             android:background="@null"
             android:scaleType="center"
             android:src="@drawable/user_icon_profile_page"
-            tools:layout_editor_absoluteY="0dp"
             app:layout_constraintDimensionRatio="H,9:4"
             app:layout_constraintTop_toBottomOf="@id/personalInformationTitle"
             tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
             android:text="Nom"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/userIcon"/>
+            app:layout_constraintTop_toBottomOf="@id/userIcon"
+            tools:layout_editor_absoluteX="0dp" />
 
         <TextView
             android:id="@+id/firstName"
